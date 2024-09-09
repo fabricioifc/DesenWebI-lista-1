@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body */
+body {
+  background-color: indigo;
+  color: white;
+  background-color: #222;
+}
+
+/* header */
+header {
+  background-color: darkslateblue;
+  padding: 10px;
+  text-align: center;
+}
+
+/* main */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  flex-direction: row;
+}
+
+section {
+  flex: 1 1 100%;
+  background-color: #444;
+  padding: 10px;
+}
+
+/* form com flexbox usando 100% do espaço */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  flex-direction: row;
+}
+
+.input-group > label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  width: 100%;
+  color: white;
+}
+
+form input[type="number"] {
+  display: block;
+  padding: 8px;
+  width: 100%;
+}
+
+.input-checkbox {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 3px;
+}
+
+.input-checkbox > label {
+  margin-right: 10px;
+}
+
+.input-checkbox p {
+  flex: 1 1 100%;
+}
+
+/* botão */
+button {
+  background-color: darkslateblue;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-self: flex-end;
+}
+
+button:hover {
+  background-color: darkslategray;
+}
+
+.radio-group {
+  display: block;
+  margin-top: 5px;
+}
+
+.radio-group .input-checkbox {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+section#resultado {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+section#resultado .card {
+  background-color: #222;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1 0 calc(20% - 10px);
+  max-width: calc(25% - 10px);
+}
+
+section#resultado .card img {
+  width: 100%;
+}
+
+section#resultado a {
+  background-color: darkslateblue;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+section#resultado .actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
+}
+
+section#resultado a:hover {
+  background-color: darkslategray;
+}
+
+#mensagem {
+  display: none;
+  background-color: darkslateblue;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#mensagem.erro {
+  display: block;
+  background-color: darkred;
+  color: white;
+}
+
+#mensagem.erro p {
+  margin-bottom: 10px;
+}
+
+#mensagem.erro p:last-child {
+  margin-bottom: 0;
+}
+
+#mensagem.erro p::before {
+  content: "⚠ ";
+}
+
+.error {
+  border: 1px solid red;
+  box-shadow: 0 0 5px red;
+}
+
+@media (max-width: 768px) {
+  section#resultado {
+    flex-wrap: wrap;
+  }
+
+  section#resultado .card {
+    flex: 1 0 300px;
+    align-content: center;
+  }
+
+  .form-check {
+    flex: 1 0 100%;
+  }
+
+  .input-group {
+    flex: 1 0 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  section#resultado .card {
+    flex: 1 0 100%;
+    max-width: 100%;
+  }
+}
