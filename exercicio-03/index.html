@@ -3,26 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Olá Mundo</title>
+    <title>Galeria Picsum</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <h1>Exercício 02</h1>
-      <p>Essa atividade tem como objetivo buscar imagens da API Picsum</p>
+      <h1>Galeria Picsum</h1>
+      <p>Busque e exiba imagens da API Picsum</p>
     </header>
 
     <main>
-      <section>
+      <section id="form-section">
         <div id="mensagem"></div>
-        <form id="form" class="form-container">
+        <form id="form">
           <div class="input-group">
             <label for="largura">Largura</label>
             <input
               type="number"
               id="largura"
               name="largura"
-              value=""
+              value="200"
               placeholder="200"
               autofocus
             />
@@ -65,7 +65,7 @@
 
               <div class="input-checkbox">
                 <input type="radio" id="qt10" name="quantidade" value="10" />
-                <label for="qt5">10</label>
+                <label for="qt10">10</label>
               </div>
             </div>
           </div>
